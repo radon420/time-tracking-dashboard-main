@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+  font-size: 14px;
+}
+
+body {
+  width: 100vw;
+}
+
+#background {
+  width: 100%;
+  height: 100%;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*
+======================
+User Profile Container
+======================
+*/
+
+#user {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 75%;
+  height: 150px;
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+#user-container {
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 0 25px;
+  border-radius: 10px;
+  background-color: hsl(246, 80%, 60%);
+}
+#user-image {
+  height: 50px;
+  width: 50px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+#user-div1 {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: white;
+}
+#button {
+  display: flex;
+  align-self: stretch;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 50px;
+}
+#button > button {
+  background-color: transparent;
+  border-color: transparent;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: bolder;
+}
+#button > button:hover {
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+/*
+======================
+Work Container
+======================
+*/
+
+#work,
+#play,
+#study,
+#exercise,
+#social,
+#self-care {
+  width: 75%;
+  height: 150px;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 50px 100px;
+  margin: 10px 0;
+}
+
+#work > img,
+#play > img,
+#study > img,
+#exercise > img,
+#social > img,
+#self-care > img {
+  justify-self: flex-end;
+  margin-right: 15px;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.container {
+  background-color: hsl(235, 46%, 20%);
+  border-radius: 10px;
+  padding: 0 20px;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+}
+.container > div {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: white;
+}
+.container > div > h2 {
+  font-size: 1.75rem;
+}
+.container > div > p {
+  font-size: 2.5rem;
+}
+.container > div > button {
+  background-color: transparent;
+  border: transparent;
+}
+.container > div > button:hover {
+  cursor: pointer;
+  opacity: 0.75;
+}
+.container > div > div {
+  opacity: 0.6;
+  display: flex;
+}
+
+#work {
+  background-color: hsl(15, 100%, 70%);
+}
+#play {
+  background-color: hsl(195, 74%, 62%);
+}
