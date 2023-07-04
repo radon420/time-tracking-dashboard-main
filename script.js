@@ -27,7 +27,6 @@ function workContent(call_variable) {
 function playContent(call_variable) {
   call_variable.then((current) => {
     document.querySelector("#play div div p").textContent = current[0] + "hrs";
-
     document.querySelector("#play-time").textContent = current[1] + "hrs";
   });
 }
@@ -35,7 +34,6 @@ function playContent(call_variable) {
 function study(call_variable) {
   call_variable.then((current) => {
     document.querySelector("#study div div p").textContent = current[0] + "hrs";
-
     document.querySelector("#study-time").textContent = current[1] + "hrs";
   });
 }
@@ -44,7 +42,6 @@ function exercise(call_variable) {
   call_variable.then((current) => {
     document.querySelector("#exercise div div p").textContent =
       current[0] + "hrs";
-
     document.querySelector("#exercise-time").textContent = current[1] + "hrs";
   });
 }
@@ -53,7 +50,6 @@ function social(call_variable) {
   call_variable.then((current) => {
     document.querySelector("#social div div p").textContent =
       current[0] + "hrs";
-
     document.querySelector("#social-time").textContent = current[1] + "hrs";
   });
 }
@@ -62,9 +58,23 @@ function selfCare(call_variable) {
   call_variable.then((current) => {
     document.querySelector("#self-care div div p").textContent =
       current[0] + "hrs";
-
     document.querySelector("#self-care-time").textContent = current[1] + "hrs";
   });
+}
+
+function textChange(buttonValue) {
+  if (buttonValue == 1) {
+    document.querySelectorAll(".previous-time").forEach((element) => {
+      element.textContent = "Yesterday - ";
+    });
+  } else if (buttonValue == 2) {
+    document.querySelectorAll(".previous-time").forEach((element) => {
+      element.textContent = "Last Week - ";
+    });
+  } else if (buttonValue == 3)
+    document.querySelectorAll(".previous-time").forEach((element) => {
+      element.textContent = "Last Month - ";
+    });
 }
 
 function callDaily(buttonValue = 1) {
@@ -74,6 +84,7 @@ function callDaily(buttonValue = 1) {
   exercise(variable(3, buttonValue));
   social(variable(4, buttonValue));
   selfCare(variable(5, buttonValue));
+  textChange(buttonValue);
 }
 
 function callWeekly(buttonValue = 2) {
@@ -83,6 +94,7 @@ function callWeekly(buttonValue = 2) {
   exercise(variable(3, buttonValue));
   social(variable(4, buttonValue));
   selfCare(variable(5, buttonValue));
+  textChange(buttonValue);
 }
 
 function callMonthly(buttonValue = 3) {
@@ -92,4 +104,5 @@ function callMonthly(buttonValue = 3) {
   exercise(variable(3, buttonValue));
   social(variable(4, buttonValue));
   selfCare(variable(5, buttonValue));
+  textChange(buttonValue);
 }
