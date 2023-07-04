@@ -28,9 +28,9 @@
           </div>
         </div>
         <div id="button">
-          <button id="daily">DAILY</button>
-          <button id="weekly">WEEKLY</button>
-          <button id="monthly">MONTHLY</button>
+          <button id="daily" onclick="callDaily()">DAILY</button>
+          <button id="weekly" onclick="callWeekly()">WEEKLY</button>
+          <button id="monthly" onclick="callMonthly()">MONTHLY</button>
         </div>
       </div>
       <div id="work">
@@ -65,10 +65,71 @@
           </div>
         </div>
       </div>
-      <div id="study"></div>
-      <div id="exercise"></div>
-      <div id="social"></div>
-      <div id="self-care"></div>
+      <div id="study">
+        <img src="./images/icon-study.svg" alt="" />
+        <div class="container">
+          <div>
+            <h2>STUDY</h2>
+            <p>4hrs</p>
+          </div>
+          <div>
+            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
+            <div>
+              <p>Last Week -</p>
+              <p id="study-time">7hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="exercise">
+        <img src="./images/icon-exercise.svg" alt="" />
+        <div class="container">
+          <div>
+            <h2>EXERCISE</h2>
+            <p>4hrs</p>
+          </div>
+          <div>
+            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
+            <div>
+              <p>Last Week -</p>
+              <p id="exercise-time">5hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="social">
+        <img src="./images/icon-social.svg" alt="" />
+        <div class="container">
+          <div>
+            <h2>SOCIAL</h2>
+            <p>5hrs</p>
+          </div>
+          <div>
+            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
+            <div>
+              <p>Last Week -</p>
+              <p id="social-time">10hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="self-care">
+        <img src="./images/icon-self-care.svg" alt="" />
+        <div class="container">
+          <div>
+            <h2>SELF-CARE</h2>
+            <p>2hrs</p>
+          </div>
+          <div>
+            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
+            <div>
+              <p>Last Week -</p>
+              <p id="self-care-time">2hrs</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
+  <script src="/script.js"></script>
 </html>
