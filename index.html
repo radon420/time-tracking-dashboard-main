@@ -24,108 +24,102 @@
           <img id="user-image" src="./images/image-jeremy.png" alt="" />
           <div id="user-div1">
             <p>Report for</p>
-            <h2>Jeremy</h2>
+            <h2>Jeremy <br />Robson</h2>
           </div>
         </div>
         <div id="button">
-          <button id="daily" onclick="callDaily()">DAILY</button>
-          <button id="weekly" onclick="callWeekly()">WEEKLY</button>
-          <button id="monthly" onclick="callMonthly()">MONTHLY</button>
+          <input
+            id="daily"
+            type="radio"
+            name="time-selectionbutton"
+            onclick="callDaily()"
+          />
+          <label for="daily">DAILY</label>
+          <input
+            id="weekly"
+            type="radio"
+            name="time-selectionbutton"
+            onclick="callWeekly()"
+          />
+          <label for="weekly">WEEKLY</label>
+          <input
+            id="monthly"
+            type="radio"
+            name="time-selectionbutton"
+            onclick="callMonthly()"
+          />
+          <label for="monthly">MONTHLY</label>
         </div>
       </div>
       <div id="work">
         <img src="./images/icon-work.svg" alt="" />
         <div class="container">
+          <h2>WORK</h2>
+          <p class="current-time">--hrs</p>
+          <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
           <div>
-            <h2>WORK</h2>
-            <p>32hrs</p>
-          </div>
-          <div>
-            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
-            <div>
-              <p class="previous-time">Last Week -</p>
-              <p id="work-time">36hrs</p>
-            </div>
+            <p class="previous-time-text">Previous</p>
+            <p class="previous-time" id="work-time">--hrs</p>
           </div>
         </div>
       </div>
       <div id="play">
         <img src="./images/icon-play.svg" alt="" />
         <div class="container">
+          <h2>PLAY</h2>
+          <p class="current-time">--hrs</p>
+          <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
           <div>
-            <h2>PLAY</h2>
-            <p>10hrs</p>
-          </div>
-          <div>
-            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
-            <div>
-              <p class="previous-time">Last Week -</p>
-              <p id="play-time">8hrs</p>
-            </div>
+            <p class="previous-time-text">Previous</p>
+            <p class="previous-time" id="play-time">--hrs</p>
           </div>
         </div>
       </div>
       <div id="study">
         <img src="./images/icon-study.svg" alt="" />
         <div class="container">
+          <h2>STUDY</h2>
+          <p class="current-time">--hrs</p>
+          <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
           <div>
-            <h2>STUDY</h2>
-            <p>4hrs</p>
-          </div>
-          <div>
-            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
-            <div>
-              <p class="previous-time">Last Week -</p>
-              <p id="study-time">7hrs</p>
-            </div>
+            <p class="previous-time-text">Last Week</p>
+            <p class="previous-time" id="study-time">--hrs</p>
           </div>
         </div>
       </div>
       <div id="exercise">
         <img src="./images/icon-exercise.svg" alt="" />
         <div class="container">
+          <h2>EXERCISE</h2>
+          <p class="current-time">--hrs</p>
+          <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
           <div>
-            <h2>EXERCISE</h2>
-            <p>4hrs</p>
-          </div>
-          <div>
-            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
-            <div>
-              <p class="previous-time">Last Week -</p>
-              <p id="exercise-time">5hrs</p>
-            </div>
+            <p class="previous-time-text">Previous</p>
+            <p class="previous-time" id="exercise-time">--hrs</p>
           </div>
         </div>
       </div>
       <div id="social">
         <img src="./images/icon-social.svg" alt="" />
         <div class="container">
+          <h2>SOCIAL</h2>
+          <p class="current-time">--hrs</p>
+          <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
           <div>
-            <h2>SOCIAL</h2>
-            <p>5hrs</p>
-          </div>
-          <div>
-            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
-            <div>
-              <p class="previous-time">Last Week -</p>
-              <p id="social-time">10hrs</p>
-            </div>
+            <p class="previous-time-text">Previous</p>
+            <p class="previous-time" id="social-time">--hrs</p>
           </div>
         </div>
       </div>
       <div id="self-care">
         <img src="./images/icon-self-care.svg" alt="" />
         <div class="container">
+          <h2>SELF-CARE</h2>
+          <p class="current-time">--hrs</p>
+          <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
           <div>
-            <h2>SELF-CARE</h2>
-            <p>2hrs</p>
-          </div>
-          <div>
-            <button><img src="./images/icon-ellipsis.svg" alt="" /></button>
-            <div>
-              <p class="previous-time">Last Week -</p>
-              <p id="self-care-time">2hrs</p>
-            </div>
+            <p class="previous-time-text">Previous</p>
+            <p class="previous-time" id="self-care-time">--hrs</p>
           </div>
         </div>
       </div>

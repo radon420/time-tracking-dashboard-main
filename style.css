@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,11 +12,16 @@ html {
 body {
   width: 100vw;
   height: 100vh;
+  background-color: hsl(226, 43%, 10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
 #background {
   width: 100%;
-  background-color: hsl(226, 43%, 10%);
+  height: 95%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,15 +73,22 @@ User Profile Container
   align-items: center;
   height: 50px;
 }
-#button > button {
+#button > input {
   background-color: transparent;
   border-color: transparent;
-  color: rgba(255, 255, 255, 0.75);
-  font-weight: bolder;
+  display: none;
 }
-#button > button:hover {
+#button > label {
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+}
+#button > label:hover {
   cursor: pointer;
   opacity: 0.5;
+}
+#button > input:checked + label {
+  color: white;
+  font-weight: 500;
 }
 
 /*
@@ -118,7 +131,10 @@ Work Container
   justify-content: space-between;
   z-index: 1;
   grid-area: 2 / 1 / 3 / 2;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  color: white;
 }
 .container > div {
   height: 100%;
@@ -127,24 +143,36 @@ Work Container
   justify-content: space-evenly;
   color: white;
 }
-.container > div > h2 {
-  font-size: 1.75rem;
+.container > h2 {
+  grid-area: 1 / 1 / 2 / 3;
+  font-size: 1.6rem;
 }
-.container > div > p {
+.current-time {
+  grid-area: 2 / 1 / 3 / 2;
   font-size: 2.5rem;
 }
-.container > div > button {
-  align-self: flex-end;
+.container > button {
+  grid-area: 1 / 2 / 2 / 3;
+  justify-self: right;
   background-color: transparent;
   border: transparent;
 }
-.container > div > button:hover {
+.container > button:hover {
   cursor: pointer;
   opacity: 0.75;
 }
-.container > div > div {
-  opacity: 0.6;
+.container > div {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+}
+.previous-time,
+.previous-time-text {
+  opacity: 0.6;
+}
+.previous-time-text {
+  margin-right: 10px;
 }
 
 #work {
@@ -164,4 +192,108 @@ Work Container
 }
 #self-care {
   background-color: hsl(43, 84%, 65%);
+}
+
+@media (min-width: 700px) {
+  #background {
+    max-width: 900px;
+    max-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: repeat(2, 50%);
+    align-items: center;
+    justify-items: center;
+  }
+  #user {
+    grid-area: 1 / 1 / 3 / 2;
+    width: 94%;
+    height: 90%;
+  }
+  #user-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: 70%;
+    padding: 0;
+    padding-left: 10px;
+  }
+  #button {
+    height: 25%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: space-evenly;
+    padding-top: 10px;
+    padding-left: 20px;
+  }
+  #work {
+    grid-area: 1 / 2 / 2 / 3;
+  }
+  #play {
+    grid-area: 1 / 3 / 2 / 4;
+  }
+  #study {
+    grid-area: 1 / 4 / 2 / 5;
+  }
+  #exercise {
+    grid-area: 2 / 2 / 3 / 3;
+  }
+  #social {
+    grid-area: 2 / 3 / 3 / 4;
+  }
+  #self-care {
+    grid-area: 2 / 4 / 3 / 5;
+  }
+  #work,
+  #play,
+  #study,
+  #exercise,
+  #social,
+  #self-care {
+    margin: 0;
+    height: 80%;
+    width: 94%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 25% 75%;
+    justify-self: center;
+    align-self: center;
+  }
+  #work > img,
+  #play > img,
+  #study > img,
+  #exercise > img,
+  #social > img,
+  #self-care > img {
+    width: 50px;
+  }
+
+  .container {
+    grid-area: 2 / 1 / 3 / 2;
+    align-self: flex-start;
+    height: 100%;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+  }
+  .container > h2 {
+    grid-area: 1 / 1 / 2 / 3;
+    font-size: 1rem;
+  }
+  .current-time {
+    grid-area: 2 / 1 / 3 / 3;
+    font-size: 1.5rem;
+  }
+  .container > div {
+    grid-area: 3 / 1 / 4 / 3;
+    justify-self: left;
+  }
+  .previous-time-text,
+  .previous-time {
+    font-size: 0.85rem;
+    margin: 0;
+  }
+  .previous-time {
+    margin-left: 2px;
+  }
 }

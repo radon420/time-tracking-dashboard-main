@@ -19,28 +19,31 @@ let variable = (x, buttonValue) =>
 
 function workContent(call_variable) {
   call_variable.then((current) => {
-    document.querySelector("#work div div p").textContent = current[0] + "hrs";
+    document.querySelector("#work .current-time").textContent =
+      current[0] + "hrs";
     document.querySelector("#work-time").textContent = current[1] + "hrs";
   });
 }
 
 function playContent(call_variable) {
   call_variable.then((current) => {
-    document.querySelector("#play div div p").textContent = current[0] + "hrs";
+    document.querySelector("#play .current-time").textContent =
+      current[0] + "hrs";
     document.querySelector("#play-time").textContent = current[1] + "hrs";
   });
 }
 
 function study(call_variable) {
   call_variable.then((current) => {
-    document.querySelector("#study div div p").textContent = current[0] + "hrs";
+    document.querySelector("#study .current-time").textContent =
+      current[0] + "hrs";
     document.querySelector("#study-time").textContent = current[1] + "hrs";
   });
 }
 
 function exercise(call_variable) {
   call_variable.then((current) => {
-    document.querySelector("#exercise div div p").textContent =
+    document.querySelector("#exercise .current-time").textContent =
       current[0] + "hrs";
     document.querySelector("#exercise-time").textContent = current[1] + "hrs";
   });
@@ -48,7 +51,7 @@ function exercise(call_variable) {
 
 function social(call_variable) {
   call_variable.then((current) => {
-    document.querySelector("#social div div p").textContent =
+    document.querySelector("#social .current-time").textContent =
       current[0] + "hrs";
     document.querySelector("#social-time").textContent = current[1] + "hrs";
   });
@@ -56,7 +59,7 @@ function social(call_variable) {
 
 function selfCare(call_variable) {
   call_variable.then((current) => {
-    document.querySelector("#self-care div div p").textContent =
+    document.querySelector("#self-care .current-time").textContent =
       current[0] + "hrs";
     document.querySelector("#self-care-time").textContent = current[1] + "hrs";
   });
@@ -64,15 +67,15 @@ function selfCare(call_variable) {
 
 function textChange(buttonValue) {
   if (buttonValue == 1) {
-    document.querySelectorAll(".previous-time").forEach((element) => {
+    document.querySelectorAll(".previous-time-text").forEach((element) => {
       element.textContent = "Yesterday - ";
     });
   } else if (buttonValue == 2) {
-    document.querySelectorAll(".previous-time").forEach((element) => {
+    document.querySelectorAll(".previous-time-text").forEach((element) => {
       element.textContent = "Last Week - ";
     });
   } else if (buttonValue == 3)
-    document.querySelectorAll(".previous-time").forEach((element) => {
+    document.querySelectorAll(".previous-time-text").forEach((element) => {
       element.textContent = "Last Month - ";
     });
 }
